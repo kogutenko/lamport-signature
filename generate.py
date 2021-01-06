@@ -3,9 +3,11 @@ import os
 from hashlib import sha256
 
 if len(sys.argv) != 2:
+    
     print("Lamport public and private key generator\n")
     print("Usage: generate.py [key_name]\n")
     print("Produces two files with names [key_name].public and [key_name].private. Files will be overwritten!\n")
+    
     sys.exit()
 
 

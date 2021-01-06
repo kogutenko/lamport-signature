@@ -1,12 +1,13 @@
 import sys
 from hashlib import sha256
-from binascii import unhexlify
 
 if len(sys.argv) != 3:
+    
     print("Lamport sign generator\n")
-    print("Usage: [document_name] [key_name]\n")
+    print("Usage: sign.py [document_name] [key_name]\n")
     print("Notice: private key file should be provided without '.private' extension\n")
     print("Produces one file with name [document_name].sign")
+    
     sys.exit()
 
 
@@ -27,7 +28,7 @@ with open(key_name + ".private", "r") as content_file:
     private_file = content_file.read()
 
 
-# Converting private keys file to binary form
+# Converting private keys file to list form
 
 private_file = private_file.split("\n")
 
